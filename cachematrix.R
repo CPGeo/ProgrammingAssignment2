@@ -14,5 +14,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-	solve(x)
+	
+	## first check that the matrix is square
+	if (row(x)==col(x) 
+		solve(x)
+	else
+		print("matrix is not square")
+		return NA
 }
